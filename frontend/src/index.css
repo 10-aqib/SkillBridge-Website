@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --graphite: #0f172a;
+    --graphite-2: #1e293b;
+    --paper: #f8fafc;
+    --paper-dim: #cbd5e1;
+    --copper: #f59e0b;
+    --copper-bright: #fbbf24;
+    --blue: #14b8a6;
+    --blue-bright: #2dd4bf;
+    --muted: #64748b;
+    --line: rgba(255, 255, 255, 0.08);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-graphite text-paper font-sans antialiased overflow-x-hidden selection:bg-copper selection:text-graphite;
+  }
+}
+
+@layer utilities {
+  .grid-bg {
+    background-image: linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-glass;
+  }
+  
+  .glass-panel-hover {
+    @apply glass-panel transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:-translate-y-1;
+  }
+}
