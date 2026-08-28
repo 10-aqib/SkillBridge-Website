@@ -1,0 +1,14 @@
+{
+  "name": "skillbridge-monorepo",
+  "private": true,
+  "workspaces": [
+    "website",
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces"
+  }
+}
