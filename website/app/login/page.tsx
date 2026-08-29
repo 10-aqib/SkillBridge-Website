@@ -19,6 +19,19 @@ export default async function LoginPage(
 
         <form className="flex flex-col gap-5">
           <div>
+            <label className="mb-1.5 block text-sm font-medium text-[#10233d]" htmlFor="fullName">
+              Full Name <span className="text-[#a0b3c8] font-normal">(Optional for Login)</span>
+            </label>
+            <input
+              id="fullName"
+              name="fullName"
+              type="text"
+              placeholder="John Doe"
+              className="w-full rounded-xl border border-[#dce5f0] bg-white px-4 py-3 text-sm text-[#10233d] placeholder:text-[#a0b3c8] focus:border-[#75d9c8] focus:outline-none focus:ring-4 focus:ring-[#75d9c8]/20 transition-all"
+            />
+          </div>
+
+          <div>
             <label className="mb-1.5 block text-sm font-medium text-[#10233d]" htmlFor="email">
               Email Address
             </label>
